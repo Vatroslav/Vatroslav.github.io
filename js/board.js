@@ -28,7 +28,10 @@
     return document.getElementById(id);
   }
 
-  function arrow(size) {
+  const ARROW_OUT = "M3.5 8.5l5-5M4.5 3.5h4v4";
+  const ARROW_ON = "M1.5 6h9M7.5 3l3 3-3 3";
+
+  function arrow(size, shape = ARROW_OUT) {
     const ns = "http://www.w3.org/2000/svg";
     const svg = document.createElementNS(ns, "svg");
     const path = document.createElementNS(ns, "path");
@@ -41,7 +44,7 @@
       stroke: "currentColor",
       "stroke-width": "1.6"
     }).forEach(([key, value]) => svg.setAttribute(key, value));
-    path.setAttribute("d", "M3.5 8.5l5-5M4.5 3.5h4v4");
+    path.setAttribute("d", shape);
     svg.append(path);
     return svg;
   }
@@ -97,38 +100,47 @@
     return el("div", { class: "slot" }, [fill(copy.imagePlaceholder, { name: item.name })]);
   }
 
-  /* Active: "Since Feb 2026". Finished: "Mar - Jul 2026", or just "Jul 2026" within one month. */
-  function whenLabel(item) {
-    if (item.period) return item.period;
+  /* Active: "Feb 2026 ->", read out as "Since Feb 2026". Finished: "Mar - Jul 2026", or "Jul 2026" within one month. */
+  function whenParts(item) {
+    if (item.period) return [item.period];
     if (!item.lastWorked) return null;
     const end = monthKey(item.lastWorked);
-    if (!item.started) return keyLabel(end);
+    if (!item.started) return [keyLabel(end)];
     const start = monthKey(item.started);
-    if (item.active) return fill(copy.since, { month: keyLabel(start) });
-    if (start === end) return keyLabel(end);
+    if (item.active) {
+      return [el("span", { class: "sr-only" }, [copy.sinceLabel + " "]), keyLabel(start), arrow(12, ARROW_ON)];
+    }
+    if (start === end) return [keyLabel(end)];
     const sameYear = Math.floor(start / 12) === Math.floor(end / 12);
-    return fill(copy.range, { from: sameYear ? MONTHS[start % 12] : keyLabel(start), to: keyLabel(end) });
+    return [fill(copy.range, { from: sameYear ? MONTHS[start % 12] : keyLabel(start), to: keyLabel(end) })];
   }
 
   function metaRow(item) {
-    const isNow = item.lastWorked && monthKey(item.lastWorked) === latestKey;
-    const when = whenLabel(item);
     return el("div", { class: "meta" }, [
       el("span", { class: "meta__status" }, [
         el("span", { class: "sw sw--" + item.status, "aria-hidden": "true" }),
         copy.status[item.status]
-      ]),
-      when
-        ? el("span", { class: "meta__month" }, [
-            isNow ? el("span", { class: "now", "aria-hidden": "true" }) : null,
-            when
-          ])
+      ])
+    ]);
+  }
+
+  /* The bottom of a cell: the action on the left, the dates in the right corner. */
+  function footRow(item) {
+    const label = actionLabel(item);
+    const parts = whenParts(item);
+    if (!label && !parts) return null;
+    const isNow = item.lastWorked && monthKey(item.lastWorked) === latestKey;
+    return el("div", { class: "cell__foot" }, [
+      label
+        ? externalLink({ class: "action", href: item.url, "aria-label": label + ": " + item.name }, [label, arrow(12)])
+        : null,
+      parts
+        ? el("span", { class: "meta__month" }, [isNow ? el("span", { class: "now", "aria-hidden": "true" }) : null, ...parts])
         : null
     ]);
   }
 
   function renderCell(item, headingTag, variant) {
-    const label = actionLabel(item);
     const classes = ["cell", "cell--" + item.status];
     if (variant) classes.push("cell--" + variant);
     if (item.featured) classes.push("cell--featured");
@@ -139,9 +151,7 @@
         metaRow(item),
         el(headingTag, { class: "cell__name" }, [item.name]),
         el("p", { class: "cell__desc" }, [item.description]),
-        label
-          ? externalLink({ class: "action", href: item.url, "aria-label": label + ": " + item.name }, [label, arrow(12)])
-          : null
+        footRow(item)
       ])
     ]);
   }

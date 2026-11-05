@@ -283,38 +283,75 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
-.meta__status,
-.meta__month {
+.meta__status {
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
 
-.meta__month {
-  margin-left: auto;
-  white-space: nowrap;
-}
-
-/* In narrow cells the month always takes its own line, so names line up along a row. */
+/* Cell foot: action on the left, dates in the bottom right corner. */
 .cell__body {
   container-type: inline-size;
 }
 
-@container (max-width: 240px) {
-  .meta__month {
-    flex-basis: 100%;
-    justify-content: flex-end;
+.cell__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 4px var(--space-2);
+}
+
+.meta__month {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.meta__month svg {
+  flex: none;
+}
+
+/* Where action and dates do not fit side by side, every cell stacks them, so a row stays even. */
+@container (max-width: 180px) {
+  .cell__foot {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cell__foot .action {
+    align-self: flex-start;
+  }
+
+  .cell__foot .meta__month {
+    align-self: flex-end;
     margin-left: 0;
   }
 }
 
-/* The narrowest desktop cells: a condensed cut keeps "Since Oct 2026" on one line. */
+/* The narrowest desktop cells: a condensed cut keeps a range on one line. */
 @container (max-width: 120px) {
   .meta__month {
     gap: 3px;
     font-stretch: 75%;
     letter-spacing: 0.01em;
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .sw {
