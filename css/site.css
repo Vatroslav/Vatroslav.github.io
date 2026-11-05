@@ -586,6 +586,20 @@ button:focus-visible {
   line-height: 1;
 }
 
+/* Shown only without JavaScript */
+.noscript-list {
+  margin: 0;
+  padding: var(--space-4) var(--gutter) var(--space-10);
+  list-style: none;
+}
+
+.noscript-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+}
+
 /* Footer */
 .site-footer {
   display: flex;
