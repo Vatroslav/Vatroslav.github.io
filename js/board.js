@@ -19,6 +19,11 @@
     return node;
   }
 
+  /* Every link on the page leaves the site, so all of them open in a new tab. */
+  function externalLink(attrs, children) {
+    return el("a", { ...attrs, target: "_blank", rel: "noopener" }, children);
+  }
+
   function byId(id) {
     return document.getElementById(id);
   }
@@ -116,7 +121,7 @@
         el(headingTag, { class: "cell__name" }, [item.name]),
         el("p", { class: "cell__desc" }, [item.description]),
         label
-          ? el("a", { class: "action", href: item.url, "aria-label": label + ": " + item.name }, [label, arrow(12)])
+          ? externalLink({ class: "action", href: item.url, "aria-label": label + ": " + item.name }, [label, arrow(12)])
           : null
       ])
     ]);
@@ -130,7 +135,7 @@
     byId("profile-tagline").textContent = data.profile.tagline;
     byId("profile-links").replaceChildren(
       ...data.profile.links.map((link) =>
-        el("a", { class: "profile-link", href: link.url }, [link.label, arrow(14)])
+        externalLink({ class: "profile-link", href: link.url }, [link.label, arrow(14)])
       )
     );
   }
@@ -271,7 +276,7 @@
   function renderFooter() {
     byId("footer-text").textContent = data.footer;
     byId("footer-links").replaceChildren(
-      ...data.profile.links.map((link) => el("a", { href: link.url }, [link.label]))
+      ...data.profile.links.map((link) => externalLink({ href: link.url }, [link.label]))
     );
   }
 
