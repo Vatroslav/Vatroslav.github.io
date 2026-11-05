@@ -225,7 +225,7 @@ window.PORTFOLIO = {
           },
           {
             "name": "Cijene",
-            "description": "Search across the daily price lists of grocery stores in Velika Gorica.",
+            "description": "Croatian for prices. Search across the daily price lists of grocery stores in Velika Gorica.",
             "status": "live",
             "started": "2026-09",
             "lastWorked": "2026-11",
@@ -475,7 +475,7 @@ window.PORTFOLIO = {
           },
           {
             "name": "Država, Grad, Selo",
-            "description": "An online multiplayer version of the classic pen-and-paper word game.",
+            "description": "Croatian for country, city, village. An online multiplayer version of the classic pen-and-paper word game.",
             "status": "private",
             "started": "2026-07",
             "lastWorked": "2026-07",
