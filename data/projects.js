@@ -499,7 +499,7 @@ window.PORTFOLIO = {
           },
           {
             "name": "Dodger",
-            "description": "Mini-game built from that template to test its API.",
+            "description": "Mini-game built from Juice Boilerplate to test its API.",
             "status": "private",
             "started": "2026-07",
             "lastWorked": "2026-07",
