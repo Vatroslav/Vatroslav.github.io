@@ -92,14 +92,6 @@ window.PORTFOLIO = {
             "featured": true
           },
           {
-            "name": "Desk Display",
-            "description": "A small ESP32-S3 desk device showing live Claude Code usage and what's playing on Spotify.",
-            "status": "private",
-            "lastWorked": "2026-09",
-            "url": null,
-            "featured": true
-          },
-          {
             "name": "Ferro",
             "description": "Claude Code mod: a pixel-art Norwich Terrier runs across a meadow above the prompt while Claude works.",
             "status": "open-source",
@@ -120,21 +112,8 @@ window.PORTFOLIO = {
             "description": "Claude Code mod: the prompt suggestion starts with a capital letter and ends with a full stop.",
             "status": "open-source",
             "lastWorked": "2026-10",
-            "url": "https://github.com/Vatroslav/cc-mod-suggestion-sentence-case"
-          },
-          {
-            "name": "Running Task",
-            "description": "Claude Code mod: a bar showing which background task is running and since when.",
-            "status": "private",
-            "lastWorked": "2026-10",
-            "url": null
-          },
-          {
-            "name": "Rm List",
-            "description": "Claude Code mod: lists what a delete will remove and flags what can't be recovered.",
-            "status": "private",
-            "lastWorked": "2026-10",
-            "url": null
+            "url": "https://github.com/Vatroslav/cc-mod-suggestion-sentence-case",
+            "featured": true
           },
           {
             "name": "Routines",
@@ -167,6 +146,27 @@ window.PORTFOLIO = {
           {
             "name": "Marketing Expert",
             "description": "A marketing knowledge base my other repos use through a Claude Code skill.",
+            "status": "private",
+            "lastWorked": "2026-10",
+            "url": null
+          },
+          {
+            "name": "Desk Display",
+            "description": "A small ESP32-S3 desk device showing live Claude Code usage and what's playing on Spotify.",
+            "status": "private",
+            "lastWorked": "2026-09",
+            "url": null
+          },
+          {
+            "name": "Running Task",
+            "description": "Claude Code mod: a bar showing which background task is running and since when.",
+            "status": "private",
+            "lastWorked": "2026-10",
+            "url": null
+          },
+          {
+            "name": "Rm List",
+            "description": "Claude Code mod: lists what a delete will remove and flags what can't be recovered.",
             "status": "private",
             "lastWorked": "2026-10",
             "url": null
