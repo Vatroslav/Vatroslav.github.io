@@ -289,6 +289,19 @@ button:focus-visible {
   margin-left: auto;
 }
 
+/* In narrow cells the month always takes its own line, so names line up along a row. */
+.cell__body {
+  container-type: inline-size;
+}
+
+@container (max-width: 180px) {
+  .meta__month {
+    flex-basis: 100%;
+    justify-content: flex-end;
+    margin-left: 0;
+  }
+}
+
 .sw {
   flex: none;
   display: inline-block;
