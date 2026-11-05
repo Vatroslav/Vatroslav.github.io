@@ -8,6 +8,7 @@
 // Counts, month range and the 'now' marker are computed from this file; never type them by hand.
 // The name, tagline, profile links, section headings, intro and the noscript link lists also
 // exist as static HTML in index.html for readers without JavaScript. Change them in both places.
+// The share image og.png also shows the name and tagline, so it has to be redone if they change.
 window.PORTFOLIO = {
   "showCv": false,
   "showImagePlaceholders": false,
