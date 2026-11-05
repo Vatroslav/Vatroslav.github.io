@@ -163,7 +163,9 @@
   }
 
   function sortedItems(group) {
-    return group.items.slice().sort((a, b) => Number(!!b.featured) - Number(!!a.featured));
+    /* Featured first, archived last, otherwise the order in the data file. */
+    const rank = (item) => (item.featured ? 0 : item.status === "archived" ? 2 : 1);
+    return group.items.slice().sort((a, b) => rank(a) - rank(b));
   }
 
   const boards = [];
