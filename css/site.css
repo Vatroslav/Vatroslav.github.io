@@ -292,6 +292,7 @@ button:focus-visible {
 
 .meta__month {
   margin-left: auto;
+  white-space: nowrap;
 }
 
 /* In narrow cells the month always takes its own line, so names line up along a row. */
@@ -299,11 +300,20 @@ button:focus-visible {
   container-type: inline-size;
 }
 
-@container (max-width: 180px) {
+@container (max-width: 240px) {
   .meta__month {
     flex-basis: 100%;
     justify-content: flex-end;
     margin-left: 0;
+  }
+}
+
+/* The narrowest desktop cells: a condensed cut keeps "Since Oct 2026" on one line. */
+@container (max-width: 120px) {
+  .meta__month {
+    gap: 3px;
+    font-stretch: 75%;
+    letter-spacing: 0.01em;
   }
 }
 

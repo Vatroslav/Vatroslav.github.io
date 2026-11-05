@@ -97,9 +97,22 @@
     return el("div", { class: "slot" }, [fill(copy.imagePlaceholder, { name: item.name })]);
   }
 
+  /* Active: "Since Feb 2026". Finished: "Mar - Jul 2026", or just "Jul 2026" within one month. */
+  function whenLabel(item) {
+    if (item.period) return item.period;
+    if (!item.lastWorked) return null;
+    const end = monthKey(item.lastWorked);
+    if (!item.started) return keyLabel(end);
+    const start = monthKey(item.started);
+    if (item.active) return fill(copy.since, { month: keyLabel(start) });
+    if (start === end) return keyLabel(end);
+    const sameYear = Math.floor(start / 12) === Math.floor(end / 12);
+    return fill(copy.range, { from: sameYear ? MONTHS[start % 12] : keyLabel(start), to: keyLabel(end) });
+  }
+
   function metaRow(item) {
     const isNow = item.lastWorked && monthKey(item.lastWorked) === latestKey;
-    const when = item.period || (item.lastWorked ? keyLabel(monthKey(item.lastWorked)) : null);
+    const when = whenLabel(item);
     return el("div", { class: "meta" }, [
       el("span", { class: "meta__status" }, [
         el("span", { class: "sw sw--" + item.status, "aria-hidden": "true" }),
