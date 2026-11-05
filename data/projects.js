@@ -235,23 +235,6 @@ window.PORTFOLIO = {
             "featured": true
           },
           {
-            "name": "Spotify Playlist Recovery",
-            "description": "Finds unavailable tracks in your Spotify playlists and playable replacements by the same artist.",
-            "status": "live",
-            "started": "2026-03",
-            "lastWorked": "2026-07",
-            "active": true,
-            "url": "https://spotify-playlist-recovery.vercel.app"
-          },
-          {
-            "name": "Song Ranking",
-            "description": "Builds a definitive ranked list of my favourite songs through tiers and head-to-head picks, then writes it to a Spotify playlist.",
-            "status": "private",
-            "started": "2026-06",
-            "lastWorked": "2026-06",
-            "url": null
-          },
-          {
             "name": "Cijene (en. Prices)",
             "description": "Search across the daily price lists of selected grocery stores in Velika Gorica.",
             "status": "live",
@@ -259,6 +242,15 @@ window.PORTFOLIO = {
             "lastWorked": "2026-11",
             "active": true,
             "url": "https://vatroslav.github.io/cijene/"
+          },
+          {
+            "name": "Spotify Playlist Recovery",
+            "description": "Finds unavailable tracks in your Spotify playlists and playable replacements by the same artist.",
+            "status": "live",
+            "started": "2026-03",
+            "lastWorked": "2026-07",
+            "active": true,
+            "url": "https://spotify-playlist-recovery.vercel.app"
           },
           {
             "name": "Breath Hold",
@@ -277,6 +269,14 @@ window.PORTFOLIO = {
             "lastWorked": "2026-07",
             "active": true,
             "url": "https://vatroslav.github.io/timer/"
+          },
+          {
+            "name": "Song Ranking",
+            "description": "Builds a definitive ranked list of my favourite songs through tiers and head-to-head picks, then writes it to a Spotify playlist.",
+            "status": "private",
+            "started": "2026-06",
+            "lastWorked": "2026-06",
+            "url": null
           },
           {
             "name": "What to Wear",

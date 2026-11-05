@@ -196,8 +196,12 @@
   }
 
   function sortedItems(group) {
-    /* Featured first, archived last, otherwise the order in the data file. */
-    const rank = (item) => (item.featured ? 0 : item.status === "archived" ? 2 : 1);
+    /* Featured first, then live, archived last, otherwise the order in the data file. */
+    const rank = (item) => {
+      if (item.featured) return 0;
+      if (item.status === "live") return 1;
+      return item.status === "archived" ? 3 : 2;
+    };
     return group.items.slice().sort((a, b) => rank(a) - rank(b));
   }
 
