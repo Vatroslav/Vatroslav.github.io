@@ -174,6 +174,153 @@ window.PORTFOLIO = {
         ]
       },
       {
+        "name": "Everyday tools",
+        "items": [
+          {
+            "name": "Spotify Auto Skipper",
+            "description": "Auto-skips Spotify songs you've recently scrobbled on Last.fm.",
+            "status": "open-source",
+            "lastWorked": "2026-10",
+            "url": "https://github.com/Vatroslav/spotify-auto-skipper",
+            "featured": true
+          },
+          {
+            "name": "Cijene",
+            "description": "Search across the daily price lists of grocery stores in Velika Gorica.",
+            "status": "live",
+            "lastWorked": "2026-11",
+            "url": "https://vatroslav.github.io/cijene/",
+            "featured": true
+          },
+          {
+            "name": "Spotify Playlist Recovery",
+            "description": "Finds unavailable tracks in your Spotify playlists and playable replacements by the same artist.",
+            "status": "live",
+            "lastWorked": "2026-07",
+            "url": "https://spotify-playlist-recovery.vercel.app"
+          },
+          {
+            "name": "Song Ranking",
+            "description": "Builds a definitive ranked list of my favourite songs through tiers and head-to-head picks, then writes it to a Spotify playlist.",
+            "status": "private",
+            "lastWorked": "2026-06",
+            "url": null
+          },
+          {
+            "name": "Stash",
+            "description": "A personal read-later: paste a link or text, tick it off when done.",
+            "status": "private",
+            "lastWorked": "2026-10",
+            "url": null
+          },
+          {
+            "name": "Breath Hold",
+            "description": "A dry-land breath-hold trainer. The goal is staying calm, so there are no records.",
+            "status": "live",
+            "lastWorked": "2026-09",
+            "url": "https://vatroslav.github.io/breath-hold/"
+          },
+          {
+            "name": "Timer",
+            "description": "A simple 30-second timer.",
+            "status": "live",
+            "lastWorked": "2026-07",
+            "url": "https://vatroslav.github.io/timer/"
+          },
+          {
+            "name": "What to Wear",
+            "description": "Android app: what to wear based on the current temperature.",
+            "status": "private",
+            "lastWorked": "2026-09",
+            "url": null
+          },
+          {
+            "name": "Suppletime",
+            "description": "Android reminder for when to take supplements.",
+            "status": "private",
+            "lastWorked": "2026-07",
+            "url": null
+          },
+          {
+            "name": "Workout",
+            "description": "Android app for tracking basic workouts.",
+            "status": "archived",
+            "lastWorked": "2026-05",
+            "url": null
+          },
+          {
+            "name": "Macro Recorder",
+            "description": "Windows macro recorder with a cap on delays, so a replay doesn't wait as long as I did.",
+            "status": "private",
+            "lastWorked": "2026-06",
+            "url": null
+          },
+          {
+            "name": "Activity Tracker",
+            "description": "Windows app for tracking active windows and Chrome tabs.",
+            "status": "archived",
+            "lastWorked": "2026-01",
+            "url": "https://github.com/Vatroslav/activity-tracker"
+          },
+          {
+            "name": "Book Companion",
+            "description": "A spoiler-free companion for reading books.",
+            "status": "archived",
+            "lastWorked": "2026-05",
+            "url": null
+          },
+          {
+            "name": "WhatsApp Sidebar Toggle",
+            "description": "Chrome extension: hide or show the WhatsApp Web sidebar.",
+            "status": "open-source",
+            "lastWorked": "2026-10",
+            "url": "https://github.com/Vatroslav/whatsapp-sidebar-toggle"
+          },
+          {
+            "name": "Webtoons Dark Mode",
+            "description": "Chrome extension: dark mode for webtoons.com on desktop. Comic images untouched.",
+            "status": "open-source",
+            "lastWorked": "2026-09",
+            "url": "https://github.com/Vatroslav/webtoons-dark-mode"
+          },
+          {
+            "name": "Medieval Dynasty Tracker",
+            "description": "Reads game screenshots, tracks my village and lists shortages and surpluses by priority.",
+            "status": "private",
+            "lastWorked": "2026-04",
+            "url": null
+          },
+          {
+            "name": "Epic Card Game Rules",
+            "description": "Fast rules lookup during a game of Epic Card Game.",
+            "status": "private",
+            "lastWorked": "2026-08",
+            "url": null
+          },
+          {
+            "name": "Literature translations",
+            "description": "Translating literary works from English to Croatian for my parents.",
+            "status": "private",
+            "lastWorked": "2026-07",
+            "url": null
+          },
+          {
+            "name": "Date Widget",
+            "description": "A date display widget made for one person.",
+            "status": "private",
+            "lastWorked": "2026-07",
+            "url": null
+          },
+          {
+            "name": "Networking Event",
+            "description": "A networking game where every participant meets every other participant exactly once.",
+            "status": "open-source",
+            "lastWorked": "2023-12",
+            "url": "https://github.com/Vatroslav/networking-event"
+          }
+        ]
+      },
+      {
         "name": "Games",
         "items": [
           {
@@ -310,152 +457,6 @@ window.PORTFOLIO = {
             "status": "private",
             "lastWorked": "2025-07",
             "url": null
-          }
-        ]
-      },
-      {
-        "name": "Everyday tools",
-        "items": [
-          {
-            "name": "Cijene",
-            "description": "Search across the daily price lists of grocery stores in Velika Gorica.",
-            "status": "live",
-            "lastWorked": "2026-11",
-            "url": "https://vatroslav.github.io/cijene/",
-            "featured": true
-          },
-          {
-            "name": "Spotify Playlist Recovery",
-            "description": "Finds unavailable tracks in your Spotify playlists and playable replacements by the same artist.",
-            "status": "live",
-            "lastWorked": "2026-07",
-            "url": "https://spotify-playlist-recovery.vercel.app"
-          },
-          {
-            "name": "Spotify Auto Skipper",
-            "description": "Auto-skips Spotify songs you've recently scrobbled on Last.fm.",
-            "status": "open-source",
-            "lastWorked": "2026-10",
-            "url": "https://github.com/Vatroslav/spotify-auto-skipper"
-          },
-          {
-            "name": "Song Ranking",
-            "description": "Builds a definitive ranked list of my favourite songs through tiers and head-to-head picks, then writes it to a Spotify playlist.",
-            "status": "private",
-            "lastWorked": "2026-06",
-            "url": null
-          },
-          {
-            "name": "Stash",
-            "description": "A personal read-later: paste a link or text, tick it off when done.",
-            "status": "private",
-            "lastWorked": "2026-10",
-            "url": null
-          },
-          {
-            "name": "Breath Hold",
-            "description": "A dry-land breath-hold trainer. The goal is staying calm, so there are no records.",
-            "status": "live",
-            "lastWorked": "2026-09",
-            "url": "https://vatroslav.github.io/breath-hold/"
-          },
-          {
-            "name": "Timer",
-            "description": "A simple 30-second timer.",
-            "status": "live",
-            "lastWorked": "2026-07",
-            "url": "https://vatroslav.github.io/timer/"
-          },
-          {
-            "name": "What to Wear",
-            "description": "Android app: what to wear based on the current temperature.",
-            "status": "private",
-            "lastWorked": "2026-09",
-            "url": null
-          },
-          {
-            "name": "Suppletime",
-            "description": "Android reminder for when to take supplements.",
-            "status": "private",
-            "lastWorked": "2026-07",
-            "url": null
-          },
-          {
-            "name": "Workout",
-            "description": "Android app for tracking basic workouts.",
-            "status": "archived",
-            "lastWorked": "2026-05",
-            "url": null
-          },
-          {
-            "name": "Macro Recorder",
-            "description": "Windows macro recorder with a cap on delays, so a replay doesn't wait as long as I did.",
-            "status": "private",
-            "lastWorked": "2026-06",
-            "url": null
-          },
-          {
-            "name": "Activity Tracker",
-            "description": "Windows app for tracking active windows and Chrome tabs.",
-            "status": "archived",
-            "lastWorked": "2026-01",
-            "url": "https://github.com/Vatroslav/activity-tracker"
-          },
-          {
-            "name": "Book Companion",
-            "description": "A spoiler-free companion for reading books.",
-            "status": "archived",
-            "lastWorked": "2026-05",
-            "url": null
-          },
-          {
-            "name": "WhatsApp Sidebar Toggle",
-            "description": "Chrome extension: hide or show the WhatsApp Web sidebar.",
-            "status": "open-source",
-            "lastWorked": "2026-10",
-            "url": "https://github.com/Vatroslav/whatsapp-sidebar-toggle"
-          },
-          {
-            "name": "Webtoons Dark Mode",
-            "description": "Chrome extension: dark mode for webtoons.com on desktop. Comic images untouched.",
-            "status": "open-source",
-            "lastWorked": "2026-09",
-            "url": "https://github.com/Vatroslav/webtoons-dark-mode"
-          },
-          {
-            "name": "Medieval Dynasty Tracker",
-            "description": "Reads game screenshots, tracks my village and lists shortages and surpluses by priority.",
-            "status": "private",
-            "lastWorked": "2026-04",
-            "url": null
-          },
-          {
-            "name": "Epic Card Game Rules",
-            "description": "Fast rules lookup during a game of Epic Card Game.",
-            "status": "private",
-            "lastWorked": "2026-08",
-            "url": null
-          },
-          {
-            "name": "Literature translations",
-            "description": "Translating literary works from English to Croatian for my parents.",
-            "status": "private",
-            "lastWorked": "2026-07",
-            "url": null
-          },
-          {
-            "name": "Date Widget",
-            "description": "A date display widget made for one person.",
-            "status": "private",
-            "lastWorked": "2026-07",
-            "url": null
-          },
-          {
-            "name": "Networking Event",
-            "description": "A networking game where every participant meets every other participant exactly once.",
-            "status": "open-source",
-            "lastWorked": "2023-12",
-            "url": "https://github.com/Vatroslav/networking-event"
           }
         ]
       },
