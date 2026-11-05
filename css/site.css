@@ -571,6 +571,21 @@ button:focus-visible {
   background: var(--line);
 }
 
+.blank {
+  position: relative;
+  background: var(--ground);
+}
+
+.blank::before {
+  content: "+";
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  color: var(--blank-mark);
+  font-size: 14px;
+  line-height: 1;
+}
+
 /* Footer */
 .site-footer {
   display: flex;

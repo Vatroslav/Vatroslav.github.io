@@ -159,20 +159,72 @@
     return group.items.slice().sort((a, b) => Number(!!b.featured) - Number(!!a.featured));
   }
 
+  const boards = [];
+
   function renderGroups() {
     byId("groups").replaceChildren(
       ...groups.map((group, index) => {
         const headingId = "group-" + index;
         const items = sortedItems(group);
+        const board = el("div", { class: "board" }, items.map((item) => renderCell(item, "h4")));
+        boards.push({ node: board, items: items });
         return el("section", { class: "group", "aria-labelledby": headingId }, [
           el("div", { class: "group__bar" }, [
             el("h3", { class: "group__title", id: headingId }, [group.name]),
             el("span", { class: "group__count" }, [String(items.length)])
           ]),
-          el("div", { class: "board" }, items.map((item) => renderCell(item, "h4")))
+          board
         ]);
       })
     );
+  }
+
+  /* Filler cells. Packs the items the way CSS dense auto-flow does and counts the gaps left in the used rows. */
+
+  function countGaps(items, cols, featuredRows) {
+    const rows = [];
+    const isFree = (row, col) => !rows[row] || !rows[row][col];
+
+    items.forEach((item) => {
+      const width = item.featured ? Math.min(2, cols) : 1;
+      const height = item.featured ? featuredRows : 1;
+      for (let row = 0; ; row++) {
+        for (let col = 0; col + width <= cols; col++) {
+          let fits = true;
+          for (let y = row; y < row + height; y++) {
+            for (let x = col; x < col + width; x++) {
+              if (!isFree(y, x)) fits = false;
+            }
+          }
+          if (fits) {
+            for (let y = row; y < row + height; y++) {
+              rows[y] = rows[y] || [];
+              for (let x = col; x < col + width; x++) rows[y][x] = true;
+            }
+            return;
+          }
+        }
+      }
+    });
+
+    let gaps = 0;
+    for (let y = 0; y < rows.length; y++) {
+      for (let x = 0; x < cols; x++) {
+        if (isFree(y, x)) gaps++;
+      }
+    }
+    return gaps;
+  }
+
+  function refreshFillers() {
+    const styles = getComputedStyle(document.documentElement);
+    const cols = parseInt(styles.getPropertyValue("--board-cols"), 10);
+    const featuredRows = parseInt(styles.getPropertyValue("--featured-rows"), 10);
+    boards.forEach(({ node, items }) => {
+      node.querySelectorAll(".blank").forEach((blank) => blank.remove());
+      const gaps = countGaps(items, cols, featuredRows);
+      for (let i = 0; i < gaps; i++) node.append(el("div", { class: "blank", "aria-hidden": "true" }));
+    });
   }
 
   function renderChips() {
@@ -227,4 +279,10 @@
   renderChips();
   renderGroups();
   renderFooter();
+  refreshFillers();
+
+  /* These two widths match the breakpoints in css/tokens.css. */
+  ["(min-width: 1024px)", "(min-width: 640px)"].forEach((query) => {
+    window.matchMedia(query).addEventListener("change", refreshFillers);
+  });
 })();
