@@ -100,7 +100,8 @@
     return el("div", { class: "slot" }, [fill(copy.imagePlaceholder, { name: item.name })]);
   }
 
-  /* Active: "Feb 2026 ->", read out as "Since Feb 2026". Finished: "Mar - Jul 2026", or "Jul 2026" within one month. */
+  /* Active: "Since Feb 2026", or "Feb 2026 ->" where that does not fit (see css/site.css).
+     Finished: "Mar - Jul 2026", or "Jul 2026" within one month. */
   function whenParts(item) {
     if (item.period) return [item.period];
     if (!item.lastWorked) return null;
@@ -108,7 +109,10 @@
     if (!item.started) return [keyLabel(end)];
     const start = monthKey(item.started);
     if (item.active) {
-      return [el("span", { class: "sr-only" }, [copy.sinceLabel + " "]), keyLabel(start), arrow(12, ARROW_ON)];
+      return [
+        el("span", { class: "when-long" }, [fill(copy.since, { month: keyLabel(start) })]),
+        el("span", { class: "when-short", "aria-hidden": "true" }, [keyLabel(start), arrow(12, ARROW_ON)])
+      ];
     }
     if (start === end) return [keyLabel(end)];
     const sameYear = Math.floor(start / 12) === Math.floor(end / 12);

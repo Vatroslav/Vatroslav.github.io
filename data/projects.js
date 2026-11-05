@@ -1,6 +1,7 @@
 // All page content. Add a project by adding one object to a group's items.
 // status: live | open-source | private | archived. lastWorked: YYYY-MM. url: null for private.
-// started: YYYY-MM. active: true shows "<started> ->"; otherwise the cell shows the range to lastWorked.
+// started: YYYY-MM. active: true shows "Since <started>", or "<started> ->" in the narrowest cells.
+// Without active the cell shows the range from started to lastWorked.
 // Optional per item: featured: true, image: "path/to/image.png", period: "Since 2022".
 // A period replaces all of that in the cell and does not count towards any computed number.
 // actionLabel: "Issue" replaces the default Try it or Source wording on the cell's link.
@@ -17,7 +18,7 @@ window.PORTFOLIO = {
     "totalLabel": "projects in {groups} groups",
     "summary": "Last worked on between {first} and {last}. {recent} of them in the last six months. Filled squares can be tried right now.",
     "nowLegend": "Worked on in {latest}",
-    "sinceLabel": "Since",
+    "since": "Since {month}",
     "range": "{from} - {to}",
     "chipsLabel": "Pick out by status",
     "status": {
