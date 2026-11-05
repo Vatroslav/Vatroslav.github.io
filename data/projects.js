@@ -347,22 +347,6 @@ window.PORTFOLIO = {
             "url": "https://github.com/Vatroslav/webtoons-dark-mode"
           },
           {
-            "name": "Medieval Dynasty Tracker",
-            "description": "Reads game screenshots, tracks my village and lists shortages and surpluses by priority.",
-            "status": "private",
-            "started": "2026-03",
-            "lastWorked": "2026-04",
-            "url": null
-          },
-          {
-            "name": "Epic Card Game Rules",
-            "description": "Fast rules lookup during a game of Epic Card Game.",
-            "status": "private",
-            "started": "2026-08",
-            "lastWorked": "2026-08",
-            "url": null
-          },
-          {
             "name": "Literature translations",
             "description": "Translating literary works from English to Croatian for my parents.",
             "status": "private",
@@ -585,6 +569,22 @@ window.PORTFOLIO = {
             "started": "2026-09",
             "lastWorked": "2026-11",
             "active": true,
+            "url": null
+          },
+          {
+            "name": "Medieval Dynasty Tracker",
+            "description": "Reads game screenshots, tracks my village and lists shortages and surpluses by priority.",
+            "status": "private",
+            "started": "2026-03",
+            "lastWorked": "2026-04",
+            "url": null
+          },
+          {
+            "name": "Epic Card Game Rules",
+            "description": "Fast rules lookup during a game of Epic Card Game.",
+            "status": "private",
+            "started": "2026-08",
+            "lastWorked": "2026-08",
             "url": null
           }
         ]
