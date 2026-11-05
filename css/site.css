@@ -390,13 +390,14 @@ button:focus-visible {
   background: repeating-linear-gradient(135deg, currentColor 0 1px, transparent 1px 3px);
 }
 
+/* Round, so it cannot be read as one of the square status icons. */
 .now {
   flex: none;
   display: inline-block;
   width: 8px;
   height: 8px;
-  background: var(--now);
-  outline: 1px solid currentColor;
+  border-radius: 50%;
+  background: currentColor;
 }
 
 .action {
@@ -593,6 +594,7 @@ button:focus-visible {
   flex: none;
   width: 10px;
   height: 10px;
+  border-radius: 50%;
   background: var(--now);
 }
 
