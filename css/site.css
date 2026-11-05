@@ -1,0 +1,233 @@
+/* Layout and components. Values come from css/tokens.css. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-stretch: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* Header: shares the board's grid and its lines. */
+.masthead {
+  display: grid;
+  grid-template-columns: repeat(var(--board-cols), minmax(0, 1fr));
+  gap: var(--hairline);
+  background: var(--line);
+  border-bottom: var(--hairline) solid var(--line);
+}
+
+.masthead__name {
+  grid-column: span 6;
+  grid-row: span 2;
+  display: flex;
+  align-items: flex-end;
+  min-height: 520px;
+  padding: var(--space-10) var(--gutter) var(--space-6);
+  background: var(--ground);
+}
+
+.masthead__name h1 {
+  font-size: var(--fs-name);
+  font-stretch: 68%;
+  font-weight: 850;
+  line-height: 0.86;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.masthead__lede {
+  grid-column: span 2;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-6);
+  background: var(--live-bg);
+  color: var(--live-ink);
+}
+
+.masthead__lede p {
+  font-family: var(--font-serif);
+  font-size: var(--fs-lede);
+  line-height: 1.15;
+}
+
+.masthead__links {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-3) var(--space-6);
+  background: var(--ground);
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  border-top: var(--hairline) solid var(--line);
+  color: var(--ink);
+  font-size: 17px;
+  font-stretch: 85%;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1023px) {
+  .masthead__name {
+    grid-column: span 4;
+    grid-row: auto;
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 639px) {
+  .masthead__name {
+    grid-column: span 2;
+    min-height: 280px;
+  }
+
+  .masthead__lede,
+  .masthead__links {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+}
+
+/* At work heading */
+.section-bar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-10) var(--gutter) var(--space-4);
+  border-bottom: var(--hairline) solid var(--line);
+}
+
+.section-bar__title {
+  font-size: var(--fs-label);
+  font-stretch: 68%;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.section-bar__count {
+  font-size: 14px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+/* After hours band */
+.after-hours {
+  background: var(--band);
+  color: var(--band-ink);
+}
+
+.band {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: var(--space-10);
+  align-items: end;
+  padding: var(--section-top) var(--gutter) var(--space-10);
+}
+
+.band__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.band__title {
+  color: var(--accent);
+  font-size: var(--fs-section);
+  font-stretch: 68%;
+  font-weight: 850;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.band__intro {
+  max-width: 640px;
+  font-family: var(--font-serif);
+  font-size: var(--fs-intro);
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.band__summary {
+  max-width: 600px;
+  color: var(--ink-muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.band__summary:empty,
+.band__total:empty,
+.chips:empty {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .band {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Footer */
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-6) var(--gutter) var(--space-10);
+  background: var(--band);
+  color: var(--ink-muted);
+  font-size: 14px;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+}
+
+.site-footer__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--band-ink);
+}
