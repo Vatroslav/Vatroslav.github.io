@@ -57,7 +57,7 @@ button:focus-visible {
   font-size: var(--fs-name);
   font-stretch: 68%;
   font-weight: 850;
-  line-height: 0.86;
+  line-height: 0.96; /* Tighter than this and the accent on the last letter of the name touches the line above. */
   letter-spacing: -0.02em;
   text-transform: uppercase;
 }

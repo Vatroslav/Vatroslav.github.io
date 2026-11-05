@@ -56,7 +56,7 @@
 
   /* Computed values */
 
-  const shownWork = data.work.concat(data.showCv ? [data.cv] : []);
+  const shownWork = data.work.concat(data.showCv && data.cv ? [data.cv] : []);
   const groups = data.afterHours.groups;
   const afterHoursItems = groups.flatMap((group) => group.items);
 

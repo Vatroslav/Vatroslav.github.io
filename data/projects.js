@@ -6,7 +6,7 @@
 // exist as static HTML in index.html for readers without JavaScript. Change them in both places.
 window.PORTFOLIO = {
   "showCv": false,
-  "showImagePlaceholders": true,
+  "showImagePlaceholders": false,
   "copy": {
     "workHeading": "At work",
     "workCount": "{count} things",
