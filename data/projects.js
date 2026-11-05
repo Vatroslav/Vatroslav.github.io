@@ -225,13 +225,13 @@ window.PORTFOLIO = {
             "featured": true
           },
           {
-            "name": "Cijene (en. Prices)",
-            "description": "Search across the daily price lists of selected grocery stores in Velika Gorica.",
+            "name": "Stash",
+            "description": "A personal read-later: paste a link or text, tick it off when done.",
             "status": "live",
-            "started": "2026-09",
-            "lastWorked": "2026-11",
+            "started": "2026-06",
+            "lastWorked": "2026-10",
             "active": true,
-            "url": "https://vatroslav.github.io/cijene/",
+            "url": "https://stashitforlater.com/",
             "featured": true
           },
           {
@@ -252,13 +252,13 @@ window.PORTFOLIO = {
             "url": null
           },
           {
-            "name": "Stash",
-            "description": "A personal read-later: paste a link or text, tick it off when done.",
-            "status": "private",
-            "started": "2026-06",
-            "lastWorked": "2026-10",
+            "name": "Cijene (en. Prices)",
+            "description": "Search across the daily price lists of selected grocery stores in Velika Gorica.",
+            "status": "live",
+            "started": "2026-09",
+            "lastWorked": "2026-11",
             "active": true,
-            "url": null
+            "url": "https://vatroslav.github.io/cijene/"
           },
           {
             "name": "Breath Hold",
