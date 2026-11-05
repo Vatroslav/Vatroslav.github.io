@@ -84,6 +84,14 @@ window.PORTFOLIO = {
         "name": "Claude Code and AI tooling",
         "items": [
           {
+            "name": "Personal OS",
+            "description": "My personal productivity system: goals, tasks, decisions and knowledge, run with AI assistance.",
+            "status": "private",
+            "lastWorked": "2026-11",
+            "url": null,
+            "featured": true
+          },
+          {
             "name": "Desk Display",
             "description": "A small ESP32-S3 desk device showing live Claude Code usage and what's playing on Spotify.",
             "status": "private",
@@ -106,13 +114,6 @@ window.PORTFOLIO = {
             "lastWorked": "2026-10",
             "url": "https://github.com/Vatroslav/cc-text-review",
             "featured": true
-          },
-          {
-            "name": "Personal OS",
-            "description": "My personal productivity system: goals, tasks, decisions and knowledge, run with AI assistance.",
-            "status": "private",
-            "lastWorked": "2026-11",
-            "url": null
           },
           {
             "name": "Suggestion Sentence Case",
