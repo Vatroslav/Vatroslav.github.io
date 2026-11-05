@@ -310,16 +310,13 @@ button:focus-visible {
   border: 1.5px solid currentColor;
 }
 
+/* Four shapes, so a status reads the same on a chip and in a cell: full, dot, empty, hatched. */
 .sw--live {
-  background: var(--live-bg);
-}
-
-.cell--live .sw--live {
-  background: var(--live-ink);
+  background: currentColor;
 }
 
 .sw--open-source {
-  background: currentColor;
+  background: linear-gradient(currentColor, currentColor) center / 4px 4px no-repeat;
 }
 
 .sw--archived {
@@ -505,6 +502,10 @@ button:focus-visible {
 .chip .sw {
   width: 12px;
   height: 12px;
+}
+
+.chip .sw--open-source {
+  background-size: 6px 6px;
 }
 
 .chip__count {
