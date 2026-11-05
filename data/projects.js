@@ -1,8 +1,30 @@
 // All page content. Add a project by adding one object to a group's items.
 // status: live | open-source | private | archived. lastWorked: YYYY-MM. url: null for private.
+// Optional per item: featured: true, image: "path/to/image.png".
 // Counts, month range and the 'now' marker are computed from this file; never type them by hand.
+// The name, tagline, profile links, section headings and intro also exist as static HTML in
+// index.html for readers without JavaScript. Change them in both places.
 window.PORTFOLIO = {
   "showCv": false,
+  "showImagePlaceholders": true,
+  "copy": {
+    "workHeading": "At work",
+    "workCount": "{count} things",
+    "afterHoursHeading": "After hours",
+    "totalLabel": "projects in {groups} groups",
+    "summary": "Last worked on between {first} and {last}. {recent} of them in the last six months. Filled squares can be tried right now.",
+    "nowLegend": "Worked on in {latest}",
+    "chipsLabel": "Pick out by status",
+    "status": {
+      "live": "Live",
+      "open-source": "Open source",
+      "private": "Private",
+      "archived": "Archived"
+    },
+    "actionTry": "Try it",
+    "actionSource": "Source",
+    "imagePlaceholder": "[Image placeholder: {name}]"
+  },
   "profile": {
     "name": "Vatroslav Mileusnić",
     "tagline": "Product manager and co-founder of Tabu. I build things at work and after it.",
@@ -222,7 +244,7 @@ window.PORTFOLIO = {
             "url": null
           },
           {
-            "name": "Drzava, Grad, Selo",
+            "name": "Država, Grad, Selo",
             "description": "An online multiplayer version of the classic pen-and-paper word game.",
             "status": "private",
             "lastWorked": "2026-07",
