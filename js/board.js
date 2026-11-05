@@ -175,6 +175,45 @@
     );
   }
 
+  function renderChips() {
+    const mount = byId("status-chips");
+    const statuses = Object.keys(copy.status);
+    let picked = null;
+
+    function apply() {
+      buttons.forEach((button, index) => {
+        button.setAttribute("aria-pressed", String(statuses[index] === picked));
+      });
+      byId("groups").querySelectorAll(".cell").forEach((cell) => {
+        cell.classList.toggle("is-dim", picked !== null && cell.dataset.status !== picked);
+      });
+    }
+
+    const buttons = statuses.map((status) => {
+      const count = afterHoursItems.filter((item) => item.status === status).length;
+      const button = el("button", { class: "chip", type: "button", "aria-pressed": "false" }, [
+        el("span", { class: "sw sw--" + status, "aria-hidden": "true" }),
+        copy.status[status],
+        el("span", { class: "chip__count" }, [String(count)])
+      ]);
+      button.addEventListener("click", () => {
+        picked = picked === status ? null : status;
+        apply();
+      });
+      return button;
+    });
+
+    mount.setAttribute("role", "group");
+    mount.setAttribute("aria-label", copy.chipsLabel);
+    mount.replaceChildren(
+      ...buttons,
+      el("span", { class: "legend" }, [
+        el("span", { class: "legend__mark", "aria-hidden": "true" }),
+        fill(copy.nowLegend, { latest: keyLabel(latestKey) })
+      ])
+    );
+  }
+
   function renderFooter() {
     byId("footer-text").textContent = data.footer;
     byId("footer-links").replaceChildren(
@@ -185,6 +224,7 @@
   renderProfile();
   renderWork();
   renderBand();
+  renderChips();
   renderGroups();
   renderFooter();
 })();
