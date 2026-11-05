@@ -226,11 +226,15 @@ button:focus-visible {
 
 .cell--featured {
   grid-column: span 2;
+}
+
+.cell--tall {
   grid-row: span var(--featured-rows);
 }
 
 .cell--featured .cell__body {
   gap: var(--space-3);
+  min-height: 260px;
   padding: var(--space-6);
 }
 
@@ -260,7 +264,8 @@ button:focus-visible {
 }
 
 @media (max-width: 639px) {
-  .cell--work .cell__body {
+  .cell--work .cell__body,
+  .cell--featured .cell__body {
     min-height: 0;
   }
 }

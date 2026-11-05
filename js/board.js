@@ -84,6 +84,11 @@
     return copy.actionSource;
   }
 
+  /* A featured cell is two rows tall only when it has an image slot to fill. */
+  function hasImageSlot(item) {
+    return !!item.featured && (!!item.image || !!data.showImagePlaceholders);
+  }
+
   function imageSlot(item) {
     if (item.image) {
       return el("div", { class: "slot slot--image" }, [el("img", { src: item.image, alt: item.name, loading: "lazy" })]);
@@ -114,6 +119,7 @@
     const classes = ["cell", "cell--" + item.status];
     if (variant) classes.push("cell--" + variant);
     if (item.featured) classes.push("cell--featured");
+    if (hasImageSlot(item)) classes.push("cell--tall");
     return el("article", { class: classes.join(" "), "data-status": item.status }, [
       el("div", { class: "cell__body" }, [
         item.featured ? imageSlot(item) : null,
@@ -196,7 +202,7 @@
 
     items.forEach((item) => {
       const width = item.featured ? Math.min(2, cols) : 1;
-      const height = item.featured ? featuredRows : 1;
+      const height = hasImageSlot(item) ? featuredRows : 1;
       for (let row = 0; ; row++) {
         for (let col = 0; col + width <= cols; col++) {
           let fits = true;
