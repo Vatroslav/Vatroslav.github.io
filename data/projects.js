@@ -32,6 +32,10 @@ window.PORTFOLIO = {
     "tagline": "Product manager and co-founder of Tabu. I build things at work and after it.",
     "links": [
       {
+        "label": "CV",
+        "url": "https://vatroslav.github.io/cv/"
+      },
+      {
         "label": "LinkedIn",
         "url": "https://www.linkedin.com/in/vatroslav-mileusnic"
       },
