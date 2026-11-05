@@ -88,15 +88,16 @@
 
   function metaRow(item) {
     const isNow = item.lastWorked && monthKey(item.lastWorked) === latestKey;
+    const when = item.period || (item.lastWorked ? keyLabel(monthKey(item.lastWorked)) : null);
     return el("div", { class: "meta" }, [
       el("span", { class: "meta__status" }, [
         el("span", { class: "sw sw--" + item.status, "aria-hidden": "true" }),
         copy.status[item.status]
       ]),
-      item.lastWorked
+      when
         ? el("span", { class: "meta__month" }, [
             isNow ? el("span", { class: "now", "aria-hidden": "true" }) : null,
-            keyLabel(monthKey(item.lastWorked))
+            when
           ])
         : null
     ]);

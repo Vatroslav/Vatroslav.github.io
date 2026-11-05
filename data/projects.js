@@ -1,6 +1,7 @@
 // All page content. Add a project by adding one object to a group's items.
 // status: live | open-source | private | archived. lastWorked: YYYY-MM. url: null for private.
-// Optional per item: featured: true, image: "path/to/image.png".
+// Optional per item: featured: true, image: "path/to/image.png", period: "Since Jul 2022".
+// A period replaces the month in the cell and does not count towards any computed number.
 // Counts, month range and the 'now' marker are computed from this file; never type them by hand.
 // The name, tagline, profile links, section headings, intro and the noscript link lists also
 // exist as static HTML in index.html for readers without JavaScript. Change them in both places.
@@ -49,6 +50,7 @@ window.PORTFOLIO = {
       "description": "Salary benchmarking in Croatia. I'm co-founder and CEO.",
       "status": "live",
       "lastWorked": null,
+      "period": "Since Jul 2022",
       "url": "https://tabu.hr/en"
     },
     {
