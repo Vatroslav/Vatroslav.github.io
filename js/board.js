@@ -74,6 +74,7 @@
 
   function actionLabel(item) {
     if (!item.url || item.status === "private") return null;
+    if (item.actionLabel) return item.actionLabel;
     if (item.status === "live") return copy.actionTry;
     return copy.actionSource;
   }

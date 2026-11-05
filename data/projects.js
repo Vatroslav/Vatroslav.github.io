@@ -2,6 +2,7 @@
 // status: live | open-source | private | archived. lastWorked: YYYY-MM. url: null for private.
 // Optional per item: featured: true, image: "path/to/image.png", period: "Since 2022".
 // A period replaces the month in the cell and does not count towards any computed number.
+// actionLabel: "Issue" replaces the default Try it or Source wording on the cell's link.
 // Counts, month range and the 'now' marker are computed from this file; never type them by hand.
 // The name, tagline, profile links, section headings, intro and the noscript link lists also
 // exist as static HTML in index.html for readers without JavaScript. Change them in both places.
@@ -69,10 +70,11 @@ window.PORTFOLIO = {
     },
     {
       "name": "Next.js CSP nonce repro",
-      "description": "Minimal reproduction of a Next.js bug: App Router emits the loading, template and error boundary chunk script without the CSP nonce.",
+      "description": "Found a Next.js bug and reported it upstream with a minimal reproduction.",
       "status": "open-source",
       "lastWorked": "2026-08",
-      "url": "https://github.com/Vatroslav/next-csp-nonce-repro"
+      "url": "https://github.com/vercel/next.js/issues/98015",
+      "actionLabel": "Issue"
     }
   ],
   "afterHours": {
