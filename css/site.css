@@ -343,8 +343,13 @@ button:focus-visible {
 }
 
 /* The narrowest desktop cells: "Since" does not fit, so an arrow replaces it visually while screen
-   readers still get the full text. A condensed cut keeps a range on one line. */
+   readers still get the full text. A condensed cut keeps a range on one line and long words in a
+   name whole. */
 @container (max-width: 120px) {
+  .cell__name {
+    font-stretch: 72%;
+  }
+
   .meta__month {
     gap: 3px;
     font-stretch: 75%;
