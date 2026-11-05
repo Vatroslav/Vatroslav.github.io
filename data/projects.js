@@ -52,8 +52,8 @@ window.PORTFOLIO = {
       "url": "https://tabu.hr/en"
     },
     {
-      "name": "Turnover calculator",
-      "description": "A public HR tool from Tabu.",
+      "name": "Tabu calculators",
+      "description": "Free tools from Tabu: a salary calculator and an employee turnover cost calculator.",
       "status": "live",
       "lastWorked": "2026-09",
       "url": "https://kalkulator.tabu.hr"
