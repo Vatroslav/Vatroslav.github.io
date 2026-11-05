@@ -1,0 +1,133 @@
+/* Vatroslav Board design tokens, primary theme "Black and white". */
+
+/* Fonts are self-hosted. The latin-ext files carry the Croatian letters. Licenses are in fonts/. */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url("../fonts/archivo-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url("../fonts/archivo-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/instrument-serif-regular-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/instrument-serif-regular-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/instrument-serif-italic-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/instrument-serif-italic-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  /* Color. A theme switch is one block that overrides these. */
+  --ground: #0a0a0a;
+  --ink: #f1f0ec;
+  --ink-muted: #9a9a95;
+  --line: #2a2a2a;
+  --live-bg: #f1f0ec;
+  --live-ink: #0a0a0a;
+  --band: #000000;
+  --band-ink: #f1f0ec;
+  --band-rule: #222222;
+  --chip-border: #3a3a3a;
+  --accent: #f1f0ec;
+  --now: #f1f0ec;
+  --blank-mark: #3a3a3a;
+  --hatch: rgba(255, 255, 255, 0.08);
+
+  /* Type families */
+  --font-display: Archivo, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+
+  /* Fluid type. --t grows by 1px for every 1050px of viewport, from 390px to 1440px. */
+  --t: calc((100vw - 390px) / 1050);
+  --fs-name: clamp(68px, calc(68px + 128 * var(--t)), 196px);
+  --fs-count: clamp(150px, calc(150px + 170 * var(--t)), 320px);
+  --fs-section: clamp(60px, calc(60px + 68 * var(--t)), 128px);
+  --fs-group: clamp(40px, calc(40px + 48 * var(--t)), 88px);
+  --fs-group-count: clamp(56px, calc(56px + 40 * var(--t)), 96px);
+  --fs-label: clamp(40px, calc(40px + 16 * var(--t)), 56px);
+  --fs-cell-title-featured: clamp(28px, calc(28px + 8 * var(--t)), 36px);
+  --fs-cell-title: clamp(18px, calc(18px + 1 * var(--t)), 19px);
+  --fs-lede: clamp(26px, calc(26px + 4 * var(--t)), 30px);
+  --fs-intro: clamp(24px, calc(24px + 8 * var(--t)), 32px);
+
+  /* Space */
+  --hairline: 1px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-10: 40px;
+  --space-18: 72px;
+  --space-24: 96px;
+
+  /* Layout values that change per breakpoint. js/board.js reads --board-cols and --featured-rows. */
+  --gutter: var(--space-10);
+  --group-top: var(--space-18);
+  --section-top: var(--space-24);
+  --board-cols: 8;
+  --featured-rows: 2;
+  --board-row-min: 250px;
+  --image-slot-height: 220px;
+  --cell-pad: var(--space-4);
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --board-cols: 4;
+  }
+}
+
+@media (max-width: 639px) {
+  :root {
+    --gutter: var(--space-4);
+    --group-top: var(--space-10);
+    --section-top: 56px;
+    --board-cols: 2;
+    --featured-rows: 1;
+    --board-row-min: 200px;
+    --image-slot-height: 160px;
+    --cell-pad: var(--space-3);
+  }
+}
