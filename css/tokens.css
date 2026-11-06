@@ -85,7 +85,6 @@
   --fs-section: clamp(60px, calc(60px + 68 * var(--t)), 128px);
   --fs-group: clamp(40px, calc(40px + 48 * var(--t)), 88px);
   --fs-group-count: clamp(56px, calc(56px + 40 * var(--t)), 96px);
-  --fs-label: clamp(40px, calc(40px + 16 * var(--t)), 56px);
   --fs-cell-title-featured: clamp(28px, calc(28px + 8 * var(--t)), 36px);
   --fs-cell-title: clamp(18px, calc(18px + 1 * var(--t)), 19px);
   --fs-lede: clamp(26px, calc(26px + 4 * var(--t)), 30px);

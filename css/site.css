@@ -129,18 +129,18 @@ button:focus-visible {
 /* At work heading */
 .section-bar {
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   justify-content: space-between;
   gap: var(--space-4);
-  padding: var(--space-10) var(--gutter) var(--space-4);
+  padding: var(--group-top) var(--gutter) var(--space-5);
   border-bottom: var(--hairline) solid var(--line);
 }
 
 .section-bar__title {
-  font-size: var(--fs-label);
+  font-size: var(--fs-group);
   font-stretch: 68%;
-  font-weight: 800;
-  line-height: 1;
+  font-weight: 850;
+  line-height: 0.92;
   text-transform: uppercase;
 }
 
@@ -632,7 +632,6 @@ button:focus-visible {
 }
 
 .group__title {
-  max-width: 900px;
   font-size: var(--fs-group);
   font-stretch: 68%;
   font-weight: 850;
