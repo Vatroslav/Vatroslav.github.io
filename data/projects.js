@@ -64,6 +64,34 @@ window.PORTFOLIO = {
       "url": "https://tabu.hr/en"
     },
     {
+      "name": "Tabu C2C app",
+      "description": "Compare your salary with peers in the same position. The salary survey gets you an account.",
+      "status": "live",
+      "started": "2026-05",
+      "lastWorked": "2026-11",
+      "active": true,
+      "url": "https://app.tabu.hr/",
+      "actionLabel": "Sign in"
+    },
+    {
+      "name": "Tabu C2B demo",
+      "description": "Salary benchmarking for HR and finance teams. No sign-in, a made-up company, altered amounts.",
+      "status": "live",
+      "started": "2026-07",
+      "lastWorked": "2026-11",
+      "active": true,
+      "url": "https://business-app.tabu.hr/demo?lang=en"
+    },
+    {
+      "name": "Tabu industry demo",
+      "description": "Organizations in one industry benchmark pay against each other. No sign-in, made-up organizations, in Croatian.",
+      "status": "live",
+      "started": "2026-10",
+      "lastWorked": "2026-11",
+      "active": true,
+      "url": "https://industry.tabu.hr/demo"
+    },
+    {
       "name": "Tabu calculators",
       "description": "Free tools from Tabu: a salary calculator and an employee turnover cost calculator.",
       "status": "live",
