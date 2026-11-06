@@ -102,11 +102,12 @@
   --space-18: 72px;
   --space-24: 96px;
 
-  /* Layout values that change per breakpoint. js/board.js reads --board-cols and --featured-rows. */
+  /* Layout values that change per breakpoint. js/board.js reads --board-cols, --work-cols and --featured-rows. */
   --gutter: var(--space-10);
   --group-top: var(--space-18);
   --section-top: var(--space-24);
   --board-cols: 8;
+  --work-cols: 4;
   --featured-rows: 2;
   --board-row-min: 250px;
   --image-slot-height: 220px;
@@ -116,6 +117,7 @@
 @media (max-width: 1023px) {
   :root {
     --board-cols: 4;
+    --work-cols: 2;
   }
 }
 

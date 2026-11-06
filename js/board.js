@@ -177,8 +177,8 @@
     byId("work-heading").textContent = copy.workHeading;
     byId("work-count").textContent = fill(copy.workCount, { count: shownWork.length });
     const cells = byId("work-cells");
-    cells.style.setProperty("--work-cols", shownWork.length);
     cells.replaceChildren(...shownWork.map((item) => renderCell(item, "h3", "work")));
+    boards.push({ node: cells, items: shownWork, colsVar: "--work-cols" });
   }
 
   function renderBand() {
@@ -213,7 +213,7 @@
         const headingId = "group-" + index;
         const items = sortedItems(group);
         const board = el("div", { class: "board" }, items.map((item) => renderCell(item, "h4")));
-        boards.push({ node: board, items: items });
+        boards.push({ node: board, items: items, colsVar: "--board-cols" });
         return el("section", { class: "group", "aria-labelledby": headingId }, [
           el("div", { class: "group__bar" }, [
             el("h3", { class: "group__title", id: headingId }, [group.name]),
@@ -264,9 +264,9 @@
 
   function refreshFillers() {
     const styles = getComputedStyle(document.documentElement);
-    const cols = parseInt(styles.getPropertyValue("--board-cols"), 10);
     const featuredRows = parseInt(styles.getPropertyValue("--featured-rows"), 10);
-    boards.forEach(({ node, items }) => {
+    boards.forEach(({ node, items, colsVar }) => {
+      const cols = parseInt(styles.getPropertyValue(colsVar), 10);
       node.querySelectorAll(".blank").forEach((blank) => blank.remove());
       const gaps = countGaps(items, cols, featuredRows);
       for (let i = 0; i < gaps; i++) node.append(el("div", { class: "blank", "aria-hidden": "true" }));
