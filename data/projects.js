@@ -498,6 +498,15 @@ window.PORTFOLIO = {
             "url": "https://vatroslav.github.io/water-sort/"
           },
           {
+            "name": "Nestworks",
+            "description": "A cozy factory game: chain colored blocks, pack a finished chain into a module, build bigger modules from those.",
+            "status": "private",
+            "started": "2026-11",
+            "lastWorked": "2026-11",
+            "active": true,
+            "url": null
+          },
+          {
             "name": "Choose Your Leaders",
             "description": "Deduction puzzle: defend a castle by putting the right people in four roles, when the visible stats lie.",
             "status": "private",
@@ -615,6 +624,14 @@ window.PORTFOLIO = {
             "status": "archived",
             "started": "2026-08",
             "lastWorked": "2026-09",
+            "url": null
+          },
+          {
+            "name": "SpaceSim",
+            "description": "Solo sci-fi roleplay: I play a spacer starting from a quarter-share berth, Claude plays the narrator, the ship and the world.",
+            "status": "archived",
+            "started": "2026-08",
+            "lastWorked": "2026-08",
             "url": null
           },
           {
