@@ -166,6 +166,33 @@ window.PORTFOLIO = {
             "featured": true
           },
           {
+            "name": "Health",
+            "description": "My training, nutrition and health log, with Claude as coach.",
+            "status": "private",
+            "started": "2026-05",
+            "lastWorked": "2026-11",
+            "active": true,
+            "url": null
+          },
+          {
+            "name": "Finance",
+            "description": "My personal finances: statements, spending analysis and a dashboard, with Claude running the process.",
+            "status": "private",
+            "started": "2026-07",
+            "lastWorked": "2026-11",
+            "active": true,
+            "url": null
+          },
+          {
+            "name": "English Coach",
+            "description": "My spoken and written English: a log of recurring mistakes with their cause in Croatian, and a practice program.",
+            "status": "private",
+            "started": "2026-07",
+            "lastWorked": "2026-10",
+            "active": true,
+            "url": null
+          },
+          {
             "name": "Routines",
             "description": "Claude Code mod: my personal deadlines in a bar above the prompt.",
             "status": "private",
