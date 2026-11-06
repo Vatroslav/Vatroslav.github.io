@@ -174,6 +174,24 @@ window.PORTFOLIO = {
             "url": null
           },
           {
+            "name": "Mail to Claude Code",
+            "description": "Chrome extension: opens a new Claude Code session with the email I have open in Gmail.",
+            "status": "private",
+            "started": "2026-11",
+            "lastWorked": "2026-11",
+            "active": true,
+            "url": null
+          },
+          {
+            "name": "Summarize Article",
+            "description": "Chrome extension: Claude summarizes an article, then answers my follow-up questions.",
+            "status": "private",
+            "started": "2026-11",
+            "lastWorked": "2026-11",
+            "active": true,
+            "url": null
+          },
+          {
             "name": "Marketing Expert",
             "description": "A marketing knowledge base my other repos use through a Claude Code skill.",
             "status": "private",
