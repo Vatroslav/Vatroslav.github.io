@@ -393,6 +393,15 @@ window.PORTFOLIO = {
             "url": "https://github.com/Vatroslav/webtoons-dark-mode"
           },
           {
+            "name": "Portfolio",
+            "description": "This page. Plain HTML, CSS and JavaScript, with every number computed from one data file.",
+            "status": "open-source",
+            "started": "2026-11",
+            "lastWorked": "2026-11",
+            "active": true,
+            "url": "https://github.com/Vatroslav/Vatroslav.github.io"
+          },
+          {
             "name": "Literature translations",
             "description": "Translating literary works from English to Croatian for my parents.",
             "status": "private",
