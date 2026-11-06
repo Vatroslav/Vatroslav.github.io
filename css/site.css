@@ -145,9 +145,11 @@ button:focus-visible {
 }
 
 .section-bar__count {
-  font-size: 14px;
-  font-weight: 650;
+  font-size: var(--fs-group-count);
+  font-stretch: 62%;
   font-variant-numeric: tabular-nums;
+  font-weight: 900;
+  line-height: 0.8;
 }
 
 /* At work cells: a grid of --work-cols columns. Filler cells complete the last row (js/board.js). */

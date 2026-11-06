@@ -14,7 +14,7 @@ window.PORTFOLIO = {
   "showImagePlaceholders": false,
   "copy": {
     "workHeading": "At work",
-    "workCount": "{count} things",
+    "workCount": "{count}",
     "afterHoursHeading": "After hours",
     "totalLabel": "projects in {groups} groups",
     "summary": "Last worked on between {first} and {last}. {recent} of them in the last six months. Filled squares can be tried right now.",
