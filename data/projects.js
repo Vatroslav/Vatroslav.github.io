@@ -402,13 +402,13 @@ window.PORTFOLIO = {
             "url": null
           },
           {
-            "name": "WhatsApp Sidebar Toggle",
+            "name": "Sidebar Toggle",
             "description": "Chrome extension: hide or show the WhatsApp Web sidebar.",
             "status": "open-source",
             "started": "2026-05",
             "lastWorked": "2026-10",
             "active": true,
-            "url": "https://github.com/Vatroslav/whatsapp-sidebar-toggle"
+            "url": "https://github.com/Vatroslav/sidebar-toggle"
           },
           {
             "name": "Webtoons Dark Mode",
