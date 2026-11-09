@@ -403,10 +403,10 @@ window.PORTFOLIO = {
           },
           {
             "name": "Sidebar Toggle",
-            "description": "Chrome extension: hide or show the WhatsApp Web sidebar.",
+            "description": "Chrome extension: one shortcut hides or shows the WhatsApp Web sidebar, the Gmail main menu and the Reddit right column.",
             "status": "open-source",
             "started": "2026-05",
-            "lastWorked": "2026-10",
+            "lastWorked": "2026-11",
             "active": true,
             "url": "https://github.com/Vatroslav/sidebar-toggle"
           },
