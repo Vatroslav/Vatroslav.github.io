@@ -5,7 +5,7 @@
 // Optional per item: featured: true, image: "path/to/image.png", period: "Since 2022".
 // A period replaces all of that in the cell and does not count towards any computed number.
 // actionLabel: "Issue" replaces the default Try it or Source wording on the cell's link.
-// Counts and the month range are computed from this file; never type them by hand.
+// Counts are computed from this file; never type them by hand.
 // The name, tagline, profile links, section headings, intro and the noscript link lists also
 // exist as static HTML in index.html for readers without JavaScript. Change them in both places.
 // The share image og.png also shows the name and tagline, so it has to be redone if they change.
@@ -17,7 +17,6 @@ window.PORTFOLIO = {
     "workCount": "{count}",
     "afterHoursHeading": "After hours",
     "totalLabel": "projects in {groups} groups",
-    "summary": "Last worked on between {first} and {last}. {recent} of them in the last six months. Filled squares can be tried right now.",
     "since": "Since {month}",
     "range": "{from} - {to}",
     "chipsLabel": "Pick out by status",

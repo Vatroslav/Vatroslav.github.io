@@ -68,15 +68,6 @@
   const groups = data.afterHours.groups;
   const afterHoursItems = groups.flatMap((group) => group.items);
 
-  function monthKeys(items) {
-    return items.filter((item) => item.lastWorked).map((item) => monthKey(item.lastWorked));
-  }
-
-  const afterHoursKeys = monthKeys(afterHoursItems);
-  const firstKey = Math.min(...afterHoursKeys);
-  const lastKey = Math.max(...afterHoursKeys);
-  const recentCount = afterHoursKeys.filter((key) => key >= lastKey - 5).length;
-
   /* Cell */
 
   function actionLabel(item) {
@@ -182,11 +173,6 @@
   function renderBand() {
     byId("after-hours-heading").textContent = copy.afterHoursHeading;
     byId("after-hours-intro").textContent = data.afterHours.intro;
-    byId("after-hours-summary").textContent = fill(copy.summary, {
-      first: keyLabel(firstKey),
-      last: keyLabel(lastKey),
-      recent: recentCount
-    });
     byId("after-hours-total").replaceChildren(
       el("span", { class: "band__count" }, [String(afterHoursItems.length)]),
       el("span", { class: "band__count-label" }, [fill(copy.totalLabel, { groups: groups.length })])

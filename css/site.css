@@ -475,14 +475,6 @@ button:focus-visible {
   line-height: 1.2;
 }
 
-.band__summary {
-  max-width: 600px;
-  color: var(--ink-muted);
-  font-size: 15px;
-  line-height: 1.55;
-}
-
-.band__summary:empty,
 .band__total:empty,
 .chips:empty {
   display: none;
