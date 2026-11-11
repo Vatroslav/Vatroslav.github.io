@@ -76,7 +76,6 @@
   const firstKey = Math.min(...afterHoursKeys);
   const lastKey = Math.max(...afterHoursKeys);
   const recentCount = afterHoursKeys.filter((key) => key >= lastKey - 5).length;
-  const latestKey = Math.max(...monthKeys(afterHoursItems.concat(shownWork)));
 
   /* Cell */
 
@@ -133,13 +132,12 @@
     const label = actionLabel(item);
     const parts = whenParts(item);
     if (!label && !parts) return null;
-    const isNow = item.lastWorked && monthKey(item.lastWorked) === latestKey;
     return el("div", { class: "cell__foot" }, [
       label
         ? externalLink({ class: "action", href: item.url, "aria-label": label + ": " + item.name }, [label, arrow(12)])
         : null,
       parts
-        ? el("span", { class: "meta__month" }, [isNow ? el("span", { class: "now", "aria-hidden": "true" }) : null, ...parts])
+        ? el("span", { class: "meta__month" }, parts)
         : null
     ]);
   }
@@ -303,13 +301,7 @@
 
     mount.setAttribute("role", "group");
     mount.setAttribute("aria-label", copy.chipsLabel);
-    mount.replaceChildren(
-      ...buttons,
-      el("span", { class: "legend" }, [
-        el("span", { class: "legend__mark", "aria-hidden": "true" }),
-        fill(copy.nowLegend, { latest: keyLabel(latestKey) })
-      ])
-    );
+    mount.replaceChildren(...buttons);
   }
 
   function renderFooter() {
