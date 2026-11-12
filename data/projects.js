@@ -627,6 +627,30 @@ window.PORTFOLIO = {
         "name": "Tabletop and play",
         "items": [
           {
+            "name": "Food Scaling",
+            "description": "Gothic 1 Remake mod: food also heals a share of your max health, so small food stays useful later in the game.",
+            "status": "open-source",
+            "started": "2026-11",
+            "lastWorked": "2026-11",
+            "url": "https://github.com/Vatroslav/gothic-1-food-mod"
+          },
+          {
+            "name": "Whole Vein Mining",
+            "description": "Gothic 1 Remake mod: one dig takes all the ore in a vein except the last piece.",
+            "status": "open-source",
+            "started": "2026-11",
+            "lastWorked": "2026-11",
+            "url": "https://github.com/Vatroslav/gothic-1-mining-mod"
+          },
+          {
+            "name": "Dialog Options Offset",
+            "description": "Gothic 1 Remake mod: moves the dialog options in from the left edge on ultrawide screens, by as much as a slider says.",
+            "status": "open-source",
+            "started": "2026-11",
+            "lastWorked": "2026-11",
+            "url": "https://github.com/Vatroslav/gothic-1-dialog-mod"
+          },
+          {
             "name": "Solo D&D",
             "description": "Solo D&D 5e in Faerun, with Claude as dungeon master and oracle.",
             "status": "private",
