@@ -418,6 +418,15 @@ window.PORTFOLIO = {
             "url": "https://github.com/Vatroslav/webtoons-dark-mode"
           },
           {
+            "name": "Miro Distraction-Free",
+            "description": "Chrome extension: hides distractions on Miro boards, starting with the AI chat bar.",
+            "status": "open-source",
+            "started": "2026-11",
+            "lastWorked": "2026-11",
+            "active": true,
+            "url": "https://github.com/Vatroslav/miro-distraction-free"
+          },
+          {
             "name": "Portfolio",
             "description": "This page. Plain HTML, CSS and JavaScript, with every number computed from one data file.",
             "status": "open-source",
