@@ -636,7 +636,7 @@ window.PORTFOLIO = {
         "name": "Tabletop and play",
         "items": [
           {
-            "name": "Inventory Sort",
+            "name": "G1R: Inventory Sort",
             "description": "Gothic 1 Remake mod: sorts the inventory by item type, then strength, then name.",
             "status": "open-source",
             "started": "2026-11",
@@ -644,7 +644,7 @@ window.PORTFOLIO = {
             "url": "https://github.com/Vatroslav/gothic-1-sort-mod"
           },
           {
-            "name": "Health & Mana Icons",
+            "name": "G1R: Health & Mana Icons",
             "description": "Gothic 1 Remake mod: marks inventory items that restore health or mana with the game's own icons, so you can tell food, herbs and potions apart at a glance.",
             "status": "open-source",
             "started": "2026-11",
@@ -652,7 +652,7 @@ window.PORTFOLIO = {
             "url": "https://github.com/Vatroslav/gothic-1-heal-icons-mod"
           },
           {
-            "name": "Combo Timing Cue",
+            "name": "G1R: Combo Timing Cue",
             "description": "Gothic 1 Remake mod: a short sound and a mark at the center of the screen while the next combo attack can be pressed.",
             "status": "open-source",
             "started": "2026-11",
@@ -660,7 +660,7 @@ window.PORTFOLIO = {
             "url": "https://github.com/Vatroslav/gothic-1-combo-mod"
           },
           {
-            "name": "Food Scaling",
+            "name": "G1R: Food Scaling",
             "description": "Gothic 1 Remake mod: food also heals a share of your max health, so small food stays useful later in the game.",
             "status": "open-source",
             "started": "2026-11",
@@ -668,7 +668,7 @@ window.PORTFOLIO = {
             "url": "https://github.com/Vatroslav/gothic-1-food-mod"
           },
           {
-            "name": "Whole Vein Mining",
+            "name": "G1R: Whole Vein Mining",
             "description": "Gothic 1 Remake mod: one dig takes all the ore in a vein except the last piece.",
             "status": "open-source",
             "started": "2026-11",
@@ -676,7 +676,7 @@ window.PORTFOLIO = {
             "url": "https://github.com/Vatroslav/gothic-1-mining-mod"
           },
           {
-            "name": "Dialog Options Offset",
+            "name": "G1R: Dialog Options Offset",
             "description": "Gothic 1 Remake mod: moves the dialog options in from the left edge on ultrawide screens, by as much as a slider says.",
             "status": "open-source",
             "started": "2026-11",
